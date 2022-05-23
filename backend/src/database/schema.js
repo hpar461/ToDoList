@@ -1,5 +1,20 @@
-import mongoose from 'mongoose';
+import mongoose from "mongoose";
 
 const Schema = mongoose.Schema;
 
-// TODO Your schema here. Remember to export it!
+const itemSchema = new Schema(
+  {
+    name: {
+      type: String,
+      required: true,
+    },
+    description: String,
+  },
+  {
+    timestamps: {},
+  }
+);
+
+const Item = mongoose.model("Item", itemSchema);
+
+export { Item };
