@@ -5,7 +5,7 @@
   "main": "./src/server.js",
   "scripts": {
     "start": "node -r esm ./src/server.js",
-    "server": "npm run start",
+    "server": "yarn start",
     "production": "cross-env NODE_ENV=production PORT=3000 node -r esm ./src/server.js",
     "test": "jest"
   },
