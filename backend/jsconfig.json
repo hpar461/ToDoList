@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "module": "CommonJS",
+    "baseUrl": "src",
+    "checkJs": true,
+    "jsx": "react",
+    "resolveJsonModule": true
+  }
+}
