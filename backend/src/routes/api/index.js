@@ -1,7 +1,7 @@
 import express from 'express';
-import api from './api';
+import items from './items';
 
 const router = express.Router();
-router.use('/api', api);
+router.use('/items', items);
 
 export default router;
