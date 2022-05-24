@@ -22,11 +22,10 @@ Overall, the webapp should render a graphical representation of a button, which 
 1. **MongoDB schema (5 marks):** Devise a mongoose / MongoDB schema for a button. Buttons can be pressed or unpressed.
 
 2. **Backend API (5 marks):** Your backend API, built using Express, should contain at least two endpoints:
-
    - Getting the state of the button
-
+   
    - Setting or toggling the state of the button
-
+   
 3. **Backend unit tests (5 marks):** Unit tests for your backend should test that all of your API methods perform the required updates to the database (if any), and return the correct information to the client.
 
 4. **Frontend UI (5 marks):** A button should be created using React, which can be either pressed or unpressed. The button should look visually obviously different depending on what state it is in. Images have been included in [frontend/public](./frontend/public) which can be used if desired.

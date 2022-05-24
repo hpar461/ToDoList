@@ -4,7 +4,7 @@ import {
   getAllItems,
   getItem,
   updateItem,
-} from "database/item-dao";
+} from "../../database/item-dao";
 import express from "express";
 
 // Don't really need this because it's 200 default.
@@ -24,7 +24,7 @@ router.post("/", async (req, res) => {
   res
     .status(HTTP_CREATED)
     .header("Location", `/api/articles/${newItem._id}`)
-    .send("Created!");
+    .json(newItem);
 });
 
 router.get("/", async (_, res) => {
@@ -44,13 +44,13 @@ router.get("/:id", async (req, res) => {
 });
 
 router.put("/:id", async (req, res) => {
-  const updatedItem = await updateItem({
+  const success = await updateItem({
     _id: req.params.id,
     name: req.body.name,
     description: req.body.description,
   });
 
-  res.sendStatus(updatedItem ? HTTP_NO_CONTENT : HTTP_NOT_FOUND);
+  res.sendStatus(success ? HTTP_NO_CONTENT : HTTP_NOT_FOUND);
 });
 
 router.delete("/:id", async (req, res) => {
